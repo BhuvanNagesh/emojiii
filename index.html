@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Emoji Quiz</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <!-- Home Page -->
+  <div id="homePage" class="page">
+    <h2> ☺️इमोजी से गाने का अनुमान लगाएँ📻🎶 </h2>
+    <div class="grid">
+      <!-- 16 Buttons -->
+      <button onclick="openQuestion(1, this)">1</button>
+      <button onclick="openQuestion(2, this)">2</button>
+      <button onclick="openQuestion(3, this)">3</button>
+      <button onclick="openQuestion(4, this)">4</button>
+      <button onclick="openQuestion(5, this)">5</button>
+      <button onclick="openQuestion(6, this)">6</button>
+      <button onclick="openQuestion(7, this)">7</button>
+      <button onclick="openQuestion(8, this)">8</button>
+      <button onclick="openQuestion(9, this)">9</button>
+      <button onclick="openQuestion(10, this)">10</button>
+      <button onclick="openQuestion(11, this)">11</button>
+      <button onclick="openQuestion(12, this)">12</button>
+      <button onclick="openQuestion(13, this)">13</button>
+      <button onclick="openQuestion(14, this)">14</button>
+      <button onclick="openQuestion(15, this)">15</button>
+      <button onclick="openQuestion(16, this)">16</button>
+    </div>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quizPage" class="page hidden">
+    <h3 id="questionText"></h3>
+    <img id="questionImage" src="" alt="quiz image">
+
+    <div class="buttons">
+      <button id="answerBtn" onclick="goToVideo()">Answer</button>
+      <button id="backBtn" onclick="goBack()">Back</button>
+    </div>
+  </div>
+
+  <!-- Video Page -->
+  <div id="videoPage" class="page hidden">
+    <button class="top-right" onclick="goBack()">Back</button>
+    <video id="questionVideo" width="500" controls autoplay>
+      <source id="videoSource" src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p id="videoText"></p>
+  </div>
+
+  <script src="function.js"></script>
+</body>
+</html>
